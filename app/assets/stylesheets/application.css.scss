@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+@import "font-awesome";
+@import 'base/normalize';
+@import 'base/mixins';
+@import 'base/globals';
+@import 'styles/navbar';
+@import 'styles/categories';
+@import 'styles/landing_page';

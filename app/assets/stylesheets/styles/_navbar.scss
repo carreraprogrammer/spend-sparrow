@@ -1,0 +1,12 @@
+@import '../base/mixins';
+
+.navbar-container {
+  @include center;
+  justify-content: space-between;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  border: 1px solid black;
+  padding: 12px;
+}

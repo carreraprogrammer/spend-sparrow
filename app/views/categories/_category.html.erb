@@ -1,17 +1,17 @@
-<div id="<%= dom_id category %>">
-  <p>
-    <strong>Icon:</strong>
-    <%= category.icon %>
-  </p>
+<div class="category-container">
+  <div class="category-icon-container">
+    <image src=<%= category.icon %> />
+  </div>
 
-  <p>
-    <strong>Name:</strong>
+  <div class="category-name-container">
     <%= category.name %>
-  </p>
+  </div>
 
-  <p>
-    <strong>User:</strong>
-    <%= category.user_id %>
-  </p>
+  <div class="category-total-container">
+    <strong>$<%= category.total %></strong>
+  </div>
 
+  <div class="category-date-container">
+    <%= category.date %>
+  </div>
 </div>

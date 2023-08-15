@@ -1,0 +1,24 @@
+@import 'mixins';
+
+body {
+  @include center-column;
+  min-height: 100vh;
+  border: 1px solid red;
+}
+
+.general-container {
+  @include center-column;
+  justify-content: flex-start;
+  width: 95%;
+  max-width: 1200px;
+  position: relative;
+  margin-top: 60px;
+  min-height: 80vh;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .general-container {
+    width: 70%;
+  }
+}

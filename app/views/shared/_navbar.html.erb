@@ -1,4 +1,12 @@
 
 <%if user_signed_in?%>
-  <%= link_to "Log Out", destroy_user_session_path, method: :get, class: "button logOut" %>
+<div class="navbar-container">
+  <i class="fa-solid fa-bars"></i>
+  <%= link_to root_path do%>
+    <h1 class="pageTitle">Page Title</h1>
+  <%end%>
+  <%= link_to destroy_user_session_path, method: :get, class: "button logOut" do %>
+    <i class="fa-solid fa-right-from-bracket"></i>
+  <%end%>
+</div>
 <%end%>
