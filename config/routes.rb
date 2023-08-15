@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, path: ''
+  root 'landing_pages#index'
+  devise_for :users, controllers: { registrations: 'registrations' }, path: ''
   resources :categories do
     resources :budgets
   end
