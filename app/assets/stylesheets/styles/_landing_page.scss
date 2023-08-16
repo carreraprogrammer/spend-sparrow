@@ -1,0 +1,31 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.landing-page-container {
+  @include center-column;
+  height: 105vh;
+  position: relative;
+  .landing-page-title {
+    font-size: 3rem;
+    font-family: 'Leckerli One', cursive;
+    font-weight: lighter;
+  }
+  .landing-button {
+    @include center-column;
+    position: absolute;
+    bottom: 5vh;
+    width: 95%;
+    .signin-button {
+      @include center;
+      height: 50px;
+      width: 100%;
+      background-color: $primary-color;
+      color: white;
+    }
+    .signup-button {
+      @include center;
+      height: 50px;
+      width: 100%;
+    }
+  }
+}

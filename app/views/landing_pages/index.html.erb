@@ -1,6 +1,7 @@
-<div class="general-container">
-   <h1 class="page-title"> Welcome to SpendSparrow </h1>
-   <p> A profesional application to manage your budget </p>
-   <%= link_to "Sign In", user_session_path %>
-   <%= link_to "Sign up", new_user_registration_path %>
+<div class="landing-page-container">
+   <h1 class="landing-page-title"> SpendSparrow </h1>
+   <div class="landing-button">
+     <%= link_to "LOG IN", user_session_path, class: "signin-button" %>
+     <%= link_to "SIGN UP", new_user_registration_path, class: "signup-button" %>
+   </div>
 </div>
