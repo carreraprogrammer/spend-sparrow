@@ -10,15 +10,28 @@ body {
   @include center-column;
   justify-content: flex-start;
   width: 95%;
-  max-width: 1200px;
   position: relative;
   margin-top: 60px;
   min-height: 80vh;
-  height: auto;
+  height: 90vh;
+  padding-bottom: 5vh;
+  overflow-y: scroll;
 }
 
-@media (min-width: 768px) {
-  .general-container {
-    width: 70%;
-  }
+.general-container::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.general-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.general-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.back-button {
+  position: absolute;
+  top: 7%;
+  left: 5%;
 }

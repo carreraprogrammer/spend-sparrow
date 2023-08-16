@@ -2,7 +2,7 @@
 
 
 #categories {
-  width: 100%;
+  max-width: 1200px;
 }
 
 .category-container {
@@ -11,6 +11,8 @@
   grid-template-rows: 2fr 1fr;
   border: 1px solid black;
   margin: 24px 0;
+
+
   > div {
     @include center-column;
     align-items: flex-start;
@@ -42,6 +44,8 @@
   .category-date-container {
     grid-column: 2/span 2;
     grid-row: 3;
+    height: 12px;
+    font-size: 10px;
     border-top: #e0e0e0 1px solid;
     color: #e0e0e0;
     margin-right: 12px;
@@ -55,21 +59,32 @@
   bottom: 0;
   border: 1px solid black;
   width: 100%;
+  background: white;
 }
 
 
 @media (min-width: 768px) {
+  #categories {
+    width: 40%;
+  }
+
   .category-container {
     width: 100%;
+    > div {
+      padding-left: 0;
+    }
     .category-icon-container {
     grid-column: 1;
     grid-row: 1 / span 3;
-    @include center;
-    
-    img {
-      
-      min-width: 200px;
-      height: auto;
+    padding-right: 0;
+    padding-left: 12px;
+
+      img {
+        height: auto;
+      }
     }
-  }}
+    .category-date-container {
+      margin: 0;
+    }
+  }
 }

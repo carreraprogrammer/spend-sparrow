@@ -2,7 +2,6 @@
   <% if category.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
-
       <ul>
         <% category.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -12,21 +11,38 @@
   <% end %>
 
   <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+    <%= form.label :icon, "Select your icon", style: "display: block" %>
+    <div class="icon-options">
+      <% Category::ICONS.each do |icon_name, icon_url| %>
+        <label>
+          <%= form.radio_button :icon, icon_url %>
+          <%= image_tag icon_url, class: "icon-image" %>
+        </label>
+      <% end %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="text-input-container">
+    <%= form.text_field :name, placeholder: "name"%>
   </div>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
+  <%= form.hidden_field :user_id, value: current_user.id %>
 
   <div>
     <%= form.submit %>
   </div>
 <% end %>
+
+<style>
+  .icon-options {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .icon-image {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+  }
+</style>

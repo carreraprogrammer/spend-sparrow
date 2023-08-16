@@ -1,10 +1,29 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @category %>
+<div class="general-container">
 
-<div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
+  <div class="category-show-container">
+    <div class="icon-show-container">
+      <image src=<%=@category.icon%> />
+    </div>
+     <div class="name-show-container">
+       <%= @category.name %>
+     </div>
+    <div class="total-show-container">
+      $ <%= @category.total%>
+    </div>
+  </div>
 
-  <%= button_to "Destroy this category", @category, method: :delete %>
+  <div id="budgets">
+    <% @category.budgets.each do |budget| %>
+      <%= render 'shared/budget', budget: budget %>
+    <% end %>
+  </div>
+
 </div>
+
+<%= link_to "New budget", new_category_budget_path(@category), class: "new-category-button"%>
+
+<%= link_to categories_path, class: "back-button" do %>
+  <i class="fa-solid fa-circle-arrow-left fa-bounce"></i>
+<%end%>

@@ -1,0 +1,35 @@
+@import '../base/mixins';
+
+form {
+  @include center-column;
+  width: 100%;
+  margin: 12px;
+  padding: 12px 0;
+
+  >div {
+    @include center-column;
+  }
+
+  .icon-options {
+    border: 1px solid black;
+    height: 4rem;
+    overflow-y: scroll;
+    @include center;
+    margin-top: 12px;
+  }
+
+  .text-input-container {
+    width: 100%;
+    input {
+      width: 100%;
+      height: 2.5rem;
+      margin: 12px 0;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  form {
+    width: 40%;
+  }
+}
