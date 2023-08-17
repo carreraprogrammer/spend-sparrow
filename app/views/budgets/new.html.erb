@@ -1,11 +1,11 @@
+<div class="navbar-container">
+  <%= render 'shared/back_button'%>
+  <%= render 'shared/title', page_title: "NEW BUDGET"%>
+  <%= render 'shared/submit_button', button_title: "SAVE", form_id: "new-budget" %>
+</div>
 
 <div class="general-container">
   <%= render "form", budget: @budget %>
 </div>
 
 <br>
-
-
-  <%= link_to root_path, class: "back-button" do %>
-    <i class="fa-solid fa-circle-arrow-left fa-bounce"></i>
-  <%end%>

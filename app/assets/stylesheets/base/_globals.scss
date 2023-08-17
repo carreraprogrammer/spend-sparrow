@@ -10,11 +10,9 @@ body {
   @include center-column;
   justify-content: flex-start;
   width: 100%;
-  position: relative;
   min-height: 80vh;
   height: 90vh;
   padding-top: 6vh;
-  padding-bottom: 80px;
   overflow-y: scroll;
 }
 
@@ -27,7 +25,23 @@ body {
 }
 
 .back-button {
+  flex-basis: 20%;
+}
+
+.submit-button {
+  border: none;
+  color: white;
+  background-color: transparent;
+  min-width: 20%;
+}
+
+.devise-links {
+  padding: 12px;
+  color: $secondary-text-color;
+}
+
+.back-button-two {
   position: absolute;
-  top: 7%;
-  left: 5%;
+  top: 8%;
+  left: 3%;
 }

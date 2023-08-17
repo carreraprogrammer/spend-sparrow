@@ -6,7 +6,16 @@ form {
   width: 100%;
   background-color: white;
 
-  >div {
+  label {
+    font-weight: bolder;
+    padding: 5px;
+  }
+
+  input {
+    padding-left: 5px;
+  }
+
+  > div {
     @include center-column;
     border: 1px solid $secondary-text-color;
   }
@@ -15,7 +24,7 @@ form {
     height: 4rem;
     overflow-y: scroll;
     @include center;
-    margin-top: 12px;
+    border: 1px solid $secondary-text-color;
   }
 
   .text-input-container {
@@ -29,6 +38,28 @@ form {
     .password {
       border-top: 1px solid $secondary-text-color;
     }
+  }
+
+  .icon-options {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .icon-image {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 5px;
+  }
+
+  .icon-options label input[type="radio"]:checked + .icon-image {
+    background: rgba(0, 128, 0, 0.1)
+  }
+
+  label input[type="radio"] {
+    display: none;
   }
 
   .submit-button {

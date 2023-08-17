@@ -1,4 +1,4 @@
-<%= form_with(model: budget, url: category_budgets_path(params[:category_id])) do |form| %>
+<%= form_with(model: budget, url: category_budgets_path(params[:category_id]), html: {id: "new-budget"}) do |form| %>
   <% if budget.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(budget.errors.count, "error") %> prohibited this budget from being saved:</h2>
@@ -29,10 +29,5 @@
                                               .map { |category| [category.name, category.id] }
                                     ),
                    { include_blank: 'Select your Category' } %>
-  </div>
-
-
-  <div class="submit-button">
-    <%= form.submit %>
   </div>
 <% end %>

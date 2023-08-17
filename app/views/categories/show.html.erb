@@ -1,3 +1,9 @@
+<div class="navbar-container">
+  <%= render 'shared/burger_menu'%>
+  <%= render 'shared/title', page_title: "BUDGETS"%>
+  <%= render 'shared/logout' %>
+</div>
+
 <div class="general-container">
 
   <div class="category-show-container">
@@ -24,6 +30,6 @@
   <%= link_to "New budget", new_category_budget_path(@category), class: "new-category-button"%>
 </div>
 
-<%= link_to categories_path, class: "back-button" do %>
-  <i class="fa-solid fa-circle-arrow-left fa-bounce"></i>
+<%= link_to categories_path, class: "back-button-two" do %>
+  <i class="fa-solid fa-circle-arrow-left"></i>
 <%end%>
