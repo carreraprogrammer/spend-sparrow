@@ -13,18 +13,21 @@ form {
 
   input {
     padding-left: 5px;
+    margin-left: 5px;
   }
 
   > div {
     @include center-column;
-    border: 1px solid $secondary-text-color;
+    border-bottom: 1px solid $secondary-text-color;
+    margin-left: 5px;
   }
 
   .icon-options {
     height: 4rem;
     overflow-y: scroll;
     @include center;
-    border: 1px solid $secondary-text-color;
+    border-bottom: 1px solid $secondary-text-color;
+    margin-left: 5px;
   }
 
   .text-input-container {
