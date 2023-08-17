@@ -4,23 +4,18 @@
 body {
   @include center-column;
   min-height: 100vh;
-  border: 1px solid red;
 }
 
 .general-container {
   @include center-column;
   justify-content: flex-start;
-  width: 95%;
+  width: 100%;
   position: relative;
-  margin-top: 60px;
   min-height: 80vh;
   height: 90vh;
-  padding-bottom: 5vh;
+  padding-top: 6vh;
+  margin-bottom: 80px;
   overflow-y: scroll;
-}
-
-.general-container::-webkit-scrollbar {
-  width: 0.5em;
 }
 
 .general-container::-webkit-scrollbar-track {

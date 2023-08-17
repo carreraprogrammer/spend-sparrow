@@ -6,6 +6,7 @@
   grid-template-rows: 1fr 1fr;
   border: 1px solid black;
   margin: 24px;
+  background-color: white;
   > div {
     @include center;
     padding: 5px;
@@ -31,10 +32,13 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
+  @include center-column;
   .budget-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: 1px solid black;
     padding: 12px;
+    background-color: white;
+    width: 95%;
   }
 }

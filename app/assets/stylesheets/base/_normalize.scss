@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Montserrat:wght@300;700&display=swap');
-
+@import '../base/variables';
 // Variables
 $font-family-sans-serif: 'Montserrat', sans-serif;
 
@@ -35,6 +35,8 @@ html {
 body {
   font-family: $font-family-sans-serif;
   line-height: 1.5;
+  color: $text-color;
+  background-color: #f0f0f0;
 }
 
 h1, h2, h3, h4, h5, h6 {

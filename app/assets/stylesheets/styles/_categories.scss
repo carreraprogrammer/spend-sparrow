@@ -1,8 +1,12 @@
 @import '../base/mixins';
+@import '../base/variables';
 
 
 #categories {
   max-width: 1200px;
+  a {
+    @include center;
+  }
 }
 
 .category-container {
@@ -11,6 +15,8 @@
   grid-template-rows: 2fr 1fr;
   border: 1px solid black;
   margin: 24px 0;
+  background-color: white;
+  width: 95%;
 
 
   > div {
@@ -52,14 +58,20 @@
   }
 }
 
-.new-category-button {
+.new-category-container {
   @include center;
-  height: 50px;
+  height: 80px;
   position: absolute;
   bottom: 0;
-  border: 1px solid black;
   width: 100%;
-  background: white;
+  background: $secondary-color;
+  .new-category-button {
+    @include center;
+    border: 1px solid white;
+    color: white;
+    width: 90%;
+    height: 50px;
+  }
 }
 
 
