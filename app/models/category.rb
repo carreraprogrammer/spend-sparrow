@@ -1,6 +1,9 @@
 class Category < ApplicationRecord
   belongs_to :user
   has_many :budgets
+  validates :icon, presence: true
+  validates :name, presence: true
+  validates :user, presence: true
 
   ICONS = {
     'icon1' => 'https://cdn-icons-png.flaticon.com/128/4341/4341865.png',

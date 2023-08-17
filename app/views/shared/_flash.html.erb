@@ -1,0 +1,22 @@
+<div id="flash-notice" class="flash-message" style="color: green;">
+   <% if flash[:notice] %>
+     <div class="flash-message notice">
+       <%= flash[:notice] %>
+     </div>
+   <% end %>
+   <% if flash[:alert]  %>
+     <div class="flash-message alert" style="color: red">
+       <%= flash[:alert] %>
+     </div>
+   <% end %>
+   <% if flash[:warning] %>
+     <div class="flash-message warning">
+       <%= flash[:warning] %>
+     </div>
+   <% end %>
+   <% if flash[:info] %>
+     <div class="flash-message info">
+       <%= flash[:info] %>
+     </div>
+   <% end %>
+</div>

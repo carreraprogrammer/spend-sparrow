@@ -25,11 +25,11 @@ class BudgetsController < ApplicationController
 
     respond_to do |format|
       if @budget.save
-        format.html { redirect_to budget_url(@budget), notice: "Budget was successfully created." }
-        format.json { render :show, status: :created, location: @budget }
+        flash[:notice] = "Budget succsesfully created"
+        format.html { redirect_to category_path(params[:category_id])}
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @budget.errors, status: :unprocessable_entity }
+        flash[:alert] = @budget.errors.full_messages.join(", ")
+        format.html { redirect_to new_category_budget_path(params[:category_id]) }
       end
     end
   end
@@ -65,6 +65,6 @@ class BudgetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def budget_params
-      params.require(:budget).permit(:user_id, :name, :amount)
+      params.require(:budget).permit(:user_id, :name, :amount, :category_id)
     end
 end
