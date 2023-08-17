@@ -45,3 +45,10 @@ body {
   top: 8%;
   left: 3%;
 }
+
+@media (min-width: 1200px) {
+  .general-container {
+    height: auto;
+    overflow-y: hidden;
+  }
+}
