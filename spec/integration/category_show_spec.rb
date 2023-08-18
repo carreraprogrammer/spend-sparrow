@@ -55,5 +55,13 @@ RSpec.describe "Categories", type: :system do
     expect(page).to have_selector(".budget-container:nth-child(2) p", text: "Groceries")
     expect(page).to have_selector(".budget-container:nth-child(3) p", text: "Restaurant")
   end
+
+  context "When clicking the back button" do
+    it "Redirects to the categories page" do
+      visit category_path(category)
+      click_link(class: "back-button-two")
+      expect(page).to have_content("CATEGORIES")
+    end
+  end
   
 end

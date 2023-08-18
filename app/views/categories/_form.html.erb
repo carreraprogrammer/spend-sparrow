@@ -3,10 +3,8 @@
     <%= form.label :icon, "Select your icon", style: "display: block" %>
     <div class="icon-options">
       <% Category::ICONS.each do |icon_name, icon_url| %>
-        <label>
-          <%= form.radio_button :icon, icon_url %>
+          <%= form.radio_button :icon, icon_url, id: "icon_#{icon_name}" %>
           <%= image_tag icon_url, class: "icon-image" %>
-        </label>
       <% end %>
     </div>
   </div>
