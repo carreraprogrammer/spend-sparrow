@@ -4,7 +4,7 @@
 .landing-page-container {
   @include center-column;
 
-  height: 100vh;
+  height: 105vh;
   width: 100%;
   position: relative;
   background-image: url("mobile_lp_bg.svg");
@@ -23,7 +23,7 @@
     @include center-column;
 
     position: absolute;
-    bottom: 5vh;
+    bottom: 7vh;
     width: 95%;
 
     .signin-button {
