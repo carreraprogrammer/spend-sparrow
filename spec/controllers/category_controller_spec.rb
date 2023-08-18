@@ -1,10 +1,9 @@
 require 'rails_helper'
 
-
 RSpec.describe CategoriesController, type: :controller do
   include Devise::Test::IntegrationHelpers
   before do
-    @user = User.new(name: "John Doe", email: "example@example.com", password: "password")
+    @user = User.new(name: 'John Doe', email: 'example@example.com', password: 'password')
     sign_in @user
     @user.skip_confirmation!
     @user.save!

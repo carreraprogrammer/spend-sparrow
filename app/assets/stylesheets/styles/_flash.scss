@@ -1,7 +1,14 @@
 .flash-message {
   position: absolute;
-  top: 7vh;
+  top: 5vh;
   left: 3%;
   width: 500px;
   padding: 5px;
+  background: transparent;
+}
+
+@media (min-width: 1200px) {
+  .flash-message {
+    top: 6vh;
+  }
 }

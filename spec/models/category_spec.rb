@@ -1,25 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  let(:user) { User.new(name: "John Doe", email: "example@email.com", password: "password")}
+  let(:user) { User.new(name: 'John Doe', email: 'example@email.com', password: 'password') }
 
   before do
     user.skip_confirmation!
     user.save!
   end
 
-  subject { 
-    described_class.create!(icon: "https://cdn-icons-png.flaticon.com/128/4342/4342728.png",
-                        name: "Food",
-                        user: user)
-  }
-  
-  let(:budget1) { Budget.new(user: user, category: subject, name: "Restaurant", amount: 200) }
-  
-  let(:budget2) { Budget.new(user: user, category: subject, name: "Groceries", amount: 150) }
+  subject do
+    described_class.create!(icon: 'https://cdn-icons-png.flaticon.com/128/4342/4342728.png',
+                            name: 'Food',
+                            user:)
+  end
 
+  let(:budget1) { Budget.new(user:, category: subject, name: 'Restaurant', amount: 200) }
 
-  describe "validations" do
+  let(:budget2) { Budget.new(user:, category: subject, name: 'Groceries', amount: 150) }
+
+  describe 'validations' do
     it 'Is valid with valid attributes' do
       expect(subject).to be_valid
     end
@@ -40,7 +39,7 @@ RSpec.describe Category, type: :model do
     end
   end
 
-  describe "#total" do
+  describe '#total' do
     it 'Returns the total amount of all budgets for the category' do
       budget1.save!
       budget2.save!
@@ -50,7 +49,7 @@ RSpec.describe Category, type: :model do
 
   describe '#date' do
     it 'Returns the formated date' do
-      expect(subject.date).to eq(subject.created_at.strftime("%d %b %Y"))
+      expect(subject.date).to eq(subject.created_at.strftime('%d %b %Y'))
     end
   end
 end

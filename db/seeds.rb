@@ -11,12 +11,12 @@ user.save!
 # Create categories and budgets for the user
 category1 = user.categories.create!(
   name: "Food",
-  icon: "https://cdn-icons-png.flaticon.com/128/4342/4342728.png"
+  icon: "https://cdn-icons-gif.flaticon.com/7742/7742970.gif"
 )
 
 category2 = user.categories.create!(
   name: "Entertainment",
-  icon: "https://cdn-icons-png.flaticon.com/128/4342/4342821.png"
+  icon: "https://cdn-icons-gif.flaticon.com/9583/9583340.gif"
 )
 
 Budget.create!(

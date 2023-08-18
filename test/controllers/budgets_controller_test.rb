@@ -1,45 +1,46 @@
-require "test_helper"
+require 'test_helper'
 
 class BudgetsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @budget = budgets(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get budgets_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_budget_url
     assert_response :success
   end
 
-  test "should create budget" do
-    assert_difference("Budget.count") do
+  test 'should create budget' do
+    assert_difference('Budget.count') do
       post budgets_url, params: { budget: { amount: @budget.amount, name: @budget.name, user_id: @budget.user_id } }
     end
 
     assert_redirected_to budget_url(Budget.last)
   end
 
-  test "should show budget" do
+  test 'should show budget' do
     get budget_url(@budget)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_budget_url(@budget)
     assert_response :success
   end
 
-  test "should update budget" do
-    patch budget_url(@budget), params: { budget: { amount: @budget.amount, name: @budget.name, user_id: @budget.user_id } }
+  test 'should update budget' do
+    patch budget_url(@budget),
+          params: { budget: { amount: @budget.amount, name: @budget.name, user_id: @budget.user_id } }
     assert_redirected_to budget_url(@budget)
   end
 
-  test "should destroy budget" do
-    assert_difference("Budget.count", -1) do
+  test 'should destroy budget' do
+    assert_difference('Budget.count', -1) do
       delete budget_url(@budget)
     end
 

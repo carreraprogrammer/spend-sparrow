@@ -1,12 +1,13 @@
 @import '../base/mixins';
 @import '../base/variables';
 
-
 #categories {
   max-width: 1200px;
+
   a {
     @include center;
   }
+
   padding-bottom: 80px;
 }
 
@@ -19,9 +20,9 @@
   background-color: white;
   width: 95%;
 
-
   > div {
     @include center-column;
+
     align-items: flex-start;
     padding: 12px;
   }
@@ -29,23 +30,28 @@
   .category-icon-container {
     grid-column: 1;
     grid-row: 1 / span 3;
-    
+
     img {
       @include center;
+
       max-width: 100px;
       height: auto;
-      border: 1px solid black;
+      border: 1px solid $primary-color;
     }
   }
 
   .category-name-container {
     grid-column: 2/span 1;
     grid-row: 1/span 2;
+    color: $secondary-text-color;
+    font-weight: bolder;
   }
 
   .category-total-container {
     grid-column: 3/span 1;
     grid-row: 1/span 2;
+    color: $text-color;
+    font-weight: bolder;
   }
 
   .category-date-container {
@@ -53,21 +59,26 @@
     grid-row: 3;
     height: 12px;
     font-size: 10px;
-    border-top: 1px solid black;
+    border-top: 1px solid $secondary-text-color;
     color: $secondary-text-color;
     margin-right: 12px;
+    opacity: 0.9;
   }
 }
 
 .new-category-container {
   @include center;
+
   height: 80px;
   position: absolute;
   bottom: 0;
   width: 100%;
   background: $secondary-color;
+  border: 1px solid black;
+
   .new-category-button {
     @include center;
+
     border: 1px solid white;
     color: white;
     width: 90%;
@@ -80,16 +91,15 @@
   background: darken($secondary-color, 10%);
 }
 
-.new-category-button:active { 
+.new-category-button:active {
   background: darken($secondary-color, 10%);
-  transform: scale(0.7)
+  transform: scale(0.7);
 }
 
-.new-category-button:focus { 
+.new-category-button:focus {
   background: darken($secondary-color, 10%);
-  transform: scale(0.7)
+  transform: scale(0.7);
 }
-
 
 @media (min-width: 768px) {
   #categories {
@@ -98,33 +108,39 @@
 
   .category-container {
     width: 100%;
+
     > div {
       padding-left: 0;
     }
+
     .category-icon-container {
-    grid-column: 1;
-    grid-row: 1 / span 3;
-    padding-right: 0;
-    padding-left: 12px;
+      grid-column: 1;
+      grid-row: 1 / span 3;
+      padding-right: 0;
+      padding-left: 12px;
 
       img {
         height: auto;
       }
     }
+
     .category-date-container {
       margin: 0;
     }
   }
 
   .new-category-container {
-  @include center;
-  height: 50px;
-  position: static;
-  width: 30%;
-  background: $secondary-color;
-  margin-bottom: 50px;
+    @include center;
+
+    height: 50px;
+    position: static;
+    width: 20%;
+    background: $secondary-color;
+    margin-bottom: 50px;
+
     .new-category-button {
       @include center;
+
       border: none;
       color: white;
       width: 90%;

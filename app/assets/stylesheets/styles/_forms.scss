@@ -3,6 +3,7 @@
 
 form {
   @include center-column;
+
   width: 100%;
   background-color: white;
 
@@ -18,6 +19,7 @@ form {
 
   > div {
     @include center-column;
+
     border-bottom: 1px solid $secondary-text-color;
     margin-left: 5px;
   }
@@ -25,27 +27,28 @@ form {
   .icon-options {
     height: 4rem;
     overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+
     @include center;
+
     border-bottom: 1px solid $secondary-text-color;
     margin-left: 5px;
   }
 
   .text-input-container {
     width: 100%;
+
     input {
       width: 100%;
       height: 2.5rem;
       outline: none;
       border: none;
     }
+
     .password {
       border-top: 1px solid $secondary-text-color;
     }
-  }
-
-  .icon-options {
-    display: flex;
-    flex-wrap: wrap;
   }
 
   .icon-image {
@@ -58,7 +61,7 @@ form {
   }
 
   .icon-options label input[type="radio"]:checked + .icon-image {
-    background: rgba(0, 128, 0, 0.1)
+    background: rgba(0, 128, 0, 0.1);
   }
 
   label input[type="radio"] {
@@ -70,6 +73,7 @@ form {
     border: none;
     margin-top: 12px;
     padding: 5px;
+
     input {
       border: none;
       background-color: transparent;
@@ -81,12 +85,12 @@ form {
   .options-input-container {
     width: 100%;
     height: 2.5rem;
-    border: none;
     outline: none;
     background-color: transparent;
     color: $secondary-text-color;
     text-align: center;
     border: 1px solid $secondary-text-color;
+
     select {
       width: 100%;
       height: 2.5rem;

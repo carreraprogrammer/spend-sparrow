@@ -3,11 +3,28 @@
 
 body {
   @include center-column;
+
   min-height: 100vh;
+}
+
+a {
+  transition: all 0.5s ease-in-out;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: $secondary-color;
+  transform: scale(0.98);
+}
+
+strong {
+  font-weight: bolder;
 }
 
 .general-container {
   @include center-column;
+
   justify-content: flex-start;
   width: 100%;
   min-height: 80vh;
