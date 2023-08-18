@@ -6,26 +6,26 @@
    </div>
 </div>
 
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const landingPageContainer = document.querySelector(".landing-page-container");
-
-  let addBg = () => {
-    landingPageContainer.classList.add("landing-background");
-  }
-
-  let removeBg = () => {
-    landingPageContainer.classList.remove("landing-background");
-  }
-
-  addBg();
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      removeBg();
-    } else {
-      addBg();
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const landingPageContainer = document.querySelector(".landing-page-container");
+  
+    let addBg = () => {
+      landingPageContainer.classList.add("landing-background");
     }
+  
+    let removeBg = () => {
+      landingPageContainer.classList.remove("landing-background");
+    }
+  
+    addBg();
+  
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        removeBg();
+      } else {
+        addBg();
+      }
+    });
   });
-});
-  </script>
+</script>

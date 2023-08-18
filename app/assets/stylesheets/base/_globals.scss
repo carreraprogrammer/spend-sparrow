@@ -1,9 +1,5 @@
-@import 'mixins';
-@import 'variables';
-
 body {
   @include center-column;
-
   min-height: 100vh;
 }
 
