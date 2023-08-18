@@ -80,6 +80,7 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
+  url: <%= ENV["DATABASE_URL"] %>
   <<: *default
   database: spend_sparrow_production
   username: spend_sparrow
