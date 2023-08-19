@@ -7,25 +7,32 @@
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const landingPageContainer = document.querySelector(".landing-page-container");
-  
-    let addBg = () => {
-      landingPageContainer.classList.add("landing-background");
-    }
-  
-    let removeBg = () => {
-      landingPageContainer.classList.remove("landing-background");
-    }
-  
+function addBg() {
+  const landingPageContainer = document.querySelector(".landing-page-container");
+  landingPageContainer.classList.add("landing-background");
+}
+
+function removeBg() {
+  const landingPageContainer = document.querySelector(".landing-page-container");
+  landingPageContainer.classList.remove("landing-background");
+}
+
+function handleScroll() {
+  if (window.scrollY > 0) {
+    removeBg();
+  } else {
     addBg();
-  
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        removeBg();
-      } else {
-        addBg();
-      }
-    });
-  });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  addBg();
+  window.addEventListener("scroll", handleScroll);
+});
+
+// Handle page load when Turbolinks is not present (fallback)
+document.addEventListener("page:load", () => {
+  addBg();
+  window.addEventListener("scroll", handleScroll);
+});
 </script>
