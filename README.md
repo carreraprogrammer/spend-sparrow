@@ -103,8 +103,9 @@ rspec spec/
 
 You can deploy this project using:
 
-[Live Deployment](https://rails-lmzd.onrender.com/)
-[Video Presentation](https://www.loom.com/share/e1e784b66e6b42bebe34ec608ca7d62d)
+- [Live Deployment](https://rails-lmzd.onrender.com/)
+
+- [Video Presentation](https://www.loom.com/share/e1e784b66e6b42bebe34ec608ca7d62d)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
