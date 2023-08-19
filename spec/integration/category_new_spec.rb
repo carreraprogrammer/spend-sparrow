@@ -12,7 +12,6 @@ RSpec.describe 'Category New Page', type: :system do
 
   before do
     sign_in(user)
-    user.skip_confirmation!
     user.save!
     login_as(user)
     category.save!

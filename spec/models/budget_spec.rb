@@ -4,7 +4,6 @@ RSpec.describe Budget, type: :model do
   let(:user) { User.new(name: 'John Doe', email: 'example@email.com', password: 'password') }
 
   before do
-    user.skip_confirmation!
     user.save!
   end
 

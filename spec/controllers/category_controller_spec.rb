@@ -5,7 +5,6 @@ RSpec.describe CategoriesController, type: :controller do
   before do
     @user = User.new(name: 'John Doe', email: 'example@example.com', password: 'password')
     sign_in @user
-    @user.skip_confirmation!
     @user.save!
     login_as(@user)
   end

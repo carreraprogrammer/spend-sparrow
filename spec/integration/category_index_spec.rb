@@ -9,7 +9,6 @@ RSpec.describe 'Category Index Page', type: :system do
   let(:category) { Category.new(icon: 'https://cdn-icons-png.flaticon.com/128/4342/4342728.png', name: 'Food', user:) }
 
   before do
-    user.skip_confirmation!
     user.save!
     login_as(user)
     category.save!

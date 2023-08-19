@@ -5,7 +5,6 @@ user = User.new(
   password: "password"
 )
 
-user.skip_confirmation!
 user.save!
 
 # Create categories and budgets for the user
