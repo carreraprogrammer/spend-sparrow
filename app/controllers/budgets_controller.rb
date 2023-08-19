@@ -3,7 +3,7 @@ class BudgetsController < ApplicationController
 
   # GET /budgets or /budgets.json
   def index
-    @budgets = Budget.all
+    @budgets = Budget.find_by(category_id: params[:category_id])
   end
 
   # GET /budgets/1 or /budgets/1.json

@@ -9,14 +9,17 @@
 <script>
 function addBg() {
   const landingPageContainer = document.querySelector(".landing-page-container");
-  landingPageContainer.classList.add("landing-background");
+  if (landingPageContainer) {
+    landingPageContainer.classList.add("landing-background");
+  }
 }
 
 function removeBg() {
   const landingPageContainer = document.querySelector(".landing-page-container");
-  landingPageContainer.classList.remove("landing-background");
+  if (landingPageContainer) {
+    landingPageContainer.classList.remove("landing-background");
+  }
 }
-
 function handleScroll() {
   if (window.scrollY > 0) {
     removeBg();
