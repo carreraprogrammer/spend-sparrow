@@ -3,9 +3,11 @@
     <image src=<%= category.icon %> />
   </div>
 
-  <div class="category-name-container">
-    <%= category.name %>
-  </div>
+  <%= link_to category do %>
+    <div class="category-name-container">
+      <%= category.name %>
+    </div>
+  <%end%>
 
   <div class="category-total-container">
     <strong>$<%= category.total %></strong>
@@ -14,4 +16,8 @@
   <div class="category-date-container">
     <%= category.date %>
   </div>
+
+  <%= button_to category_path(category), method: :delete, class: "delete-button" do %>
+    <i class="fa-solid fa-trash"></i>
+  <%end%>
 </div>

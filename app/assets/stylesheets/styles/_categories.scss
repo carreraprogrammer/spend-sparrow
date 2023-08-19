@@ -16,6 +16,21 @@
   margin: 24px 0;
   background-color: white;
   width: 95%;
+  position: relative;
+
+  .delete-button {
+    font-size: 12px;
+    position: absolute;
+    top: 3%;
+    right: 6px;
+    z-index: 10000;
+    background: none;
+    border: none;
+  }
+  
+  .delete-button:hover {
+    color: darken(red, 10%);
+  }
 
   > div {
     @include center-column;

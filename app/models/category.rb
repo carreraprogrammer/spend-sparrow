@@ -1,6 +1,6 @@
 class Category < ApplicationRecord
   belongs_to :user
-  has_many :budgets
+  has_many :budgets, dependent: :destroy
   validates :icon, presence: true
   validates :name, presence: true
   validates :user, presence: true
