@@ -3,8 +3,8 @@
     <image src=<%= category.icon %> />
   </div>
 
-  <%= link_to category do %>
-    <div class="category-name-container">
+  <%= link_to category, class: "category-name-container" do %>
+    <div >
       <%= category.name %>
     </div>
   <%end%>

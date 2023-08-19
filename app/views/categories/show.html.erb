@@ -5,11 +5,6 @@
 </div>
 
 <div class="general-container">
-  <% if @category.budgets.empty?%>
-    <div id='add-new'>
-      <p class="add-new-text"> Let's add a budget bellow to get started! </p>
-    </div>
-  <%else%>
     <div class="category-show-container">
       <div class="icon-show-container">
         <image src=<%=@category.icon%> />
@@ -21,13 +16,18 @@
         $<%= @category.total%>
       </div>
     </div>
-  <%end%>
 
-  <div id="budgets">
-    <% @category.budgets.order(created_at: :desc).each do |budget| %>
-      <%= render 'shared/budget', budget: budget %>
-    <% end %>
-  </div>
+   <% if @category.budgets.empty?%>
+    <div id='add-new'>
+      <p class="add-new-text"> Let's add a budget bellow to get started! </p>
+    </div>
+  <%else%>
+    <div id="budgets">
+      <% @category.budgets.order(created_at: :desc).each do |budget| %>
+        <%= render 'shared/budget', budget: budget %>
+      <% end %>
+    </div>
+  <%end%>
 
 </div>
 

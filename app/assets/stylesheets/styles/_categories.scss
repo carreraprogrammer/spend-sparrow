@@ -1,11 +1,12 @@
 #categories {
+  @include center-column;
+
   max-width: 1200px;
+  padding-bottom: 80px;
 
   a {
     @include center;
   }
-
-  padding-bottom: 80px;
 }
 
 .category-container {
@@ -57,6 +58,16 @@
     grid-row: 1/span 2;
     color: $secondary-text-color;
     font-weight: bolder;
+
+    @include center;
+
+    height: 100%;
+  }
+
+  .category-name-container:hover,
+  .category-name-container:active,
+  .category-name-container:focus {
+    color: $primary-color;
   }
 
   .category-total-container {
