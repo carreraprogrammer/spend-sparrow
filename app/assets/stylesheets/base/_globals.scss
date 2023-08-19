@@ -25,9 +25,9 @@ strong {
   justify-content: flex-start;
   width: 100%;
   min-height: 80vh;
-  height: 90vh;
   padding-top: 6vh;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .general-container::-webkit-scrollbar-track {

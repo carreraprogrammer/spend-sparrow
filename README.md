@@ -29,7 +29,9 @@
 
 # 📖 Spend Sparrow <a name="about-project">Blog Here</a>
 
-**Spend Sparrow** is a web application created with ruby on rails and postgresql, that allows users to create categories and add expenses to them. The user can also edit and delete the expenses.
+**Spend Sparrow** presents an innovative web application crafted using the dynamic Ruby on Rails framework and powered by PostgreSQL. With its intuitive interface, users can effortlessly establish personalized spending categories and seamlessly allocate expenses within them. This versatile tool not only facilitates the creation of categories but also empowers users to effortlessly append, modify, or remove expenses as needed, delivering a streamlined and efficient financial management experience.
+
+The project design was adapted of the Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
 
 ## 🛠 Built With <a name="built-with"></a>
 Ruby on Rails
@@ -104,6 +106,7 @@ rspec spec/
 You can deploy this project using:
 
 [Live Deployment](https://rails-lmzd.onrender.com/)
+[Video Presentation](https://www.loom.com/share/e1e784b66e6b42bebe34ec608ca7d62d)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
