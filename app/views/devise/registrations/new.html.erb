@@ -1,0 +1,33 @@
+<div class="navbar-container">
+  <%= render 'shared/back_button'%>
+  <%= render 'shared/title', page_title: "SIGN UP"%>
+  <%= render 'shared/submit_button', button_title: "Sign Up", form_id: "signup-form" %>
+</div>
+
+
+<div class="general-container">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { id: "signup-form"}) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="text-input-container">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name"%>
+    </div>
+
+    <div class="text-input-container">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    </div>
+
+    <div class="text-input-container">
+      <% if @minimum_password_length %>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+    </div>
+
+    <div class="text-input-container">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm your password"%>
+    </div>
+
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>

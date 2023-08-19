@@ -1,0 +1,20 @@
+<%= form_with(model: category, html: {id: "new-category"}) do |form| %>
+  <div>
+    <%= form.label :icon, "Select your icon", style: "display: block" %>
+    <div class="icon-options">
+      <% Category::ICONS.each do |icon_name, icon_url| %>
+        <label name=icon_name>
+          <%= form.radio_button :icon, icon_url, id: "icon_#{icon_name}" %>
+          <%= image_tag icon_url, class: "icon-image" %>
+        </label>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="text-input-container">
+    <%= form.text_field :name, placeholder: "Name"%>
+  </div>
+
+  <%= form.hidden_field :user_id, value: current_user.id %>
+<% end %>
+

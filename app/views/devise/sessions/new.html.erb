@@ -1,0 +1,20 @@
+<div class="navbar-container">
+  <%= render 'shared/back_button'%>
+  <%= render 'shared/title', page_title: "LOGIN"%>
+  <%= render 'shared/submit_button', button_title: "Log In", form_id: "login-form" %>
+</div>
+
+<div class="general-container">
+  
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {id: "login-form"}) do |f| %>
+    <div class="text-input-container">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email"%>
+    </div>
+  
+    <div class="text-input-container">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "password" %>
+    </div>
+  <% end %>
+  
+  <%= render "devise/shared/links" %>
+</div>

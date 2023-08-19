@@ -1,0 +1,31 @@
+.navbar-container {
+  @include center;
+
+  justify-content: space-between;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  max-width: 100vw;
+  top: 0;
+  z-index: 10000;
+  padding: 12px;
+  background-color: $primary-color;
+  color: white;
+
+  .log-out:hover {
+    color: red;
+  }
+
+  .log-out:focus {
+    color: red;
+  }
+
+  .log-out:active {
+    color: red;
+  }
+
+  button:hover {
+    color: $secondary-color;
+    cursor: pointer;
+  }
+}

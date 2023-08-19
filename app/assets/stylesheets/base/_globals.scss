@@ -1,0 +1,68 @@
+body {
+  @include center-column;
+
+  min-height: 100vh;
+}
+
+a {
+  transition: all 0.5s ease-in-out;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: $secondary-color;
+  transform: scale(0.98);
+}
+
+strong {
+  font-weight: bolder;
+}
+
+.general-container {
+  @include center-column;
+
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 80vh;
+  padding-top: 6vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.general-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.general-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.back-button {
+  flex-basis: 20%;
+}
+
+.submit-button {
+  border: none;
+  color: white;
+  background-color: transparent;
+  min-width: 20%;
+}
+
+.devise-links {
+  padding: 12px;
+  color: $secondary-text-color;
+}
+
+.back-button-two {
+  position: absolute;
+  top: 8%;
+  left: 3%;
+}
+
+@media (min-width: 1200px) {
+  .general-container {
+    height: 90vh;
+    overflow-y: hidden;
+  }
+}

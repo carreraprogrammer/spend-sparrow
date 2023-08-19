@@ -1,0 +1,78 @@
+.landing-page-container {
+  @include center-column;
+
+  height: 105vh;
+  width: 100%;
+  position: relative;
+  background-image: url("mobile_lp_bg.svg");
+  background-size: 100% 100%;
+  background-position-x: 0;
+  background-repeat: no-repeat;
+  transition: 4s background ease-in-out;
+
+  .landing-page-title {
+    font-size: 3rem;
+    font-family: 'Leckerli One', cursive;
+    font-weight: lighter;
+  }
+
+  .landing-button {
+    @include center-column;
+
+    position: absolute;
+    bottom: 7vh;
+    width: 95%;
+
+    .signin-button {
+      @include center;
+
+      height: 50px;
+      width: 100%;
+      background-color: $primary-color;
+      color: white;
+    }
+
+    .signin-button:hover {
+      background-color: darken($primary-color, 10%);
+    }
+
+    .signup-button {
+      @include center;
+
+      height: 50px;
+      width: 100%;
+    }
+  }
+}
+
+.landing-page-container.landing-background {
+  background-position-x: -50px;
+}
+
+@media (min-width: 768px) {
+  .landing-page-container {
+    background-image: url("pc_lp_bg.svg") !important;
+  }
+
+  .landing-button {
+    @include center-column;
+
+    width: 200px !important;
+
+    .signin-button {
+      @include center;
+
+      height: 50px;
+      width: 100%;
+      background-color: $primary-color;
+      color: white;
+    }
+
+    .signup-button {
+      @include center;
+
+      height: 50px;
+      width: 100%;
+    }
+  }
+}

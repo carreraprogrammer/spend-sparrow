@@ -1,0 +1,13 @@
+
+<h1>Budgets</h1>
+
+<div id="budgets">
+  <% @budgets.each do |budget| %>
+    <%= render budget %>
+    <p>
+      <%= link_to "Show this budget", budget %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "NEW BUDGET", new_budget_path %>

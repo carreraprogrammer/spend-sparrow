@@ -1,0 +1,23 @@
+<div class="category-container">
+  <div class="category-icon-container">
+    <image src=<%= category.icon %> />
+  </div>
+
+  <%= link_to category, class: "category-name-container" do %>
+    <div >
+      <%= category.name %>
+    </div>
+  <%end%>
+
+  <div class="category-total-container">
+    <strong>$<%= category.total %></strong>
+  </div>
+
+  <div class="category-date-container">
+    <%= category.date %>
+  </div>
+
+  <%= button_to category_path(category), method: :delete, class: "delete-button" do %>
+    <i class="fa-solid fa-trash"></i>
+  <%end%>
+</div>

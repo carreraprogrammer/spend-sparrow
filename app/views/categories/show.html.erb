@@ -1,0 +1,40 @@
+<div class="navbar-container">
+  <%= render 'shared/burger_menu'%>
+  <%= render 'shared/title', page_title: "BUDGETS"%>
+  <%= render 'shared/logout' %>
+</div>
+
+<div class="general-container">
+    <div class="category-show-container">
+      <div class="icon-show-container">
+        <image src=<%=@category.icon%> />
+      </div>
+       <div class="name-show-container">
+         <%= @category.name %>
+       </div>
+      <div class="total-show-container">
+        $<%= @category.total%>
+      </div>
+    </div>
+
+   <% if @category.budgets.empty?%>
+    <div id='add-new'>
+      <p class="add-new-text"> Let's add a budget bellow to get started! </p>
+    </div>
+  <%else%>
+    <div id="budgets">
+      <% @category.budgets.order(created_at: :desc).each do |budget| %>
+        <%= render 'shared/budget', budget: budget %>
+      <% end %>
+    </div>
+  <%end%>
+
+</div>
+
+<div class="new-category-container">
+  <%= link_to "NEW BUDGET", new_category_budget_path(@category), class: "new-category-button"%>
+</div>
+
+<%= link_to categories_path, class: "back-button-two" do %>
+  <i class="fa-solid fa-circle-arrow-left"></i>
+<%end%>

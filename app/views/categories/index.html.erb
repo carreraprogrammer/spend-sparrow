@@ -1,0 +1,23 @@
+<div class="navbar-container">
+  <%= render 'shared/burger_menu'%>
+  <%= render 'shared/title', page_title: "CATEGORIES" %>
+  <%= render 'shared/logout' %>
+</div>
+
+<div class="general-container">
+  <% if @categories.empty? %>
+    <div id='add-new'>
+      <p class="add-new-text">Add a new category to get started!</p>
+    </div>
+  <%else%>
+    <div id="categories">
+      <% @categories.each do |category| %>     
+          <%= render category %>
+      <% end %>
+    </div>
+  <%end%>
+</div>
+
+<div class="new-category-container">
+  <%= link_to "NEW CATEGORY", new_category_path, class: "new-category-button" %>
+</div>
